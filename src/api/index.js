@@ -3,8 +3,8 @@ import { getFormBody } from "../utils";
 
 const customFetch = async (API_URI, { body, ...customConfig }) => {
   const headers = {
+    "Content-type": "application/json; charset=UTF-8",
     // "Content-type": "x-www-form-urlencoded",
-    'Content-type': 'application/json; charset=UTF-8'
   };
 
   const config = {
@@ -23,10 +23,8 @@ const customFetch = async (API_URI, { body, ...customConfig }) => {
   try {
     const response = await fetch(API_URI, config);
     const data = await response.json();
-
     return data;
   } catch (err) {
-    console.log(err);
     return err;
   }
 };

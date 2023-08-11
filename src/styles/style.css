@@ -51,17 +51,37 @@ body{
    border-radius: 4px;
 }
 .app-wrapper .input-container img{
-    width: 50px;
+    width: 40px;
     color: aliceblue;
     background-color: black;
     border-radius: 10px;
 }
 .album-wrapper .left-component img{
-    width: 200px;
+    width: 150px;
 }
 
 .loading{
     margin-top: 10%;
     text-transform: capitalize;
     font-weight: 900;
+}
+.right-component{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.right-component .bottom-body button{
+    margin-left: 4px;
+    padding: 5px;
+    
+}
+
+.remove:hover{
+    background-color: tomato;
+    color: azure;
+}
+
+.edit:hover{
+    background-color: cadetblue;
+    color: aliceblue;
 }

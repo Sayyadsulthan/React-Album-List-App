@@ -13,13 +13,11 @@ export const useProvideAlbum = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    //   console.log("use effect :");
     const loadData = async () => {
       setLoading(true);
       const data = await getAlbums();
       if (data) {
         setAlbums(data);
-        console.log("use effect :", albums);
       }
 
       setLoading(false);
@@ -57,7 +55,6 @@ export const useProvideAlbum = () => {
     setLoading(true);
     await removeAlbum(album);
     const updatedData = albums.filter((val) => val.id !== album.id);
-    console.log("removed data", updatedData);
     setAlbums([...updatedData]);
     setLoading(false);
   };

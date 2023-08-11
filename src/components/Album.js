@@ -5,23 +5,18 @@ import { useEffect } from "react";
 import { toast } from "react-toastify";
 
 function Album({ album }) {
-  //   const [isTextEditable, setIsTextEditable] = useState(false);
   const data = useAlbum();
   const [title, setTitle] = useState("");
   const [isEditable, setIsEditable] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  //   const
 
-  //   console.log(album);
   useEffect(() => {
-    // console.log(album.title);
     setTitle(album.title);
   }, []);
 
   async function handleUpdateAlbum() {
     setIsLoading(true);
     const { userId, id } = album;
-    console.log(userId, id, title);
     const response = await data.updateAlbum(id, title, userId);
     setIsEditable(false);
     if (response) {
@@ -64,9 +59,9 @@ function Album({ album }) {
             </button>
           ) : (
             <button
+              className="edit"
               onClick={() => {
                 setIsEditable(!isEditable);
-                console.log(title);
               }}
             >
               Edit
@@ -74,6 +69,7 @@ function Album({ album }) {
           )}
 
           <button
+            className="remove"
             onClick={async () => {
               await data.removeAlbumFromList(album);
               toast.success("removed success full...");
