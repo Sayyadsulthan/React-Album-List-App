@@ -15,6 +15,9 @@ body{
     font-weight: 800;
     font-size: x-large;
 }
+.heading{
+    text-shadow: 2px 3px  rgb(164, 135, 132);
+}
 .app-wrapper{
     margin: 0;
     padding: 0;

@@ -38,7 +38,7 @@ function App() {
   return (
     <>
       <div className="app-wrapper">
-        <h1>App Component</h1>
+        <h1 className="heading">Album List App</h1>
         <div className="input-container">
           <input
             type="text"

@@ -15,6 +15,10 @@ function Album({ album }) {
   }, []);
 
   async function handleUpdateAlbum() {
+    if (title.length <= 1) {
+      toast.error("empty name cannot be update...");
+      return;
+    }
     setIsLoading(true);
     const { userId, id } = album;
     const response = await data.updateAlbum(id, title, userId);
