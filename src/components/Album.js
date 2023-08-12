@@ -4,8 +4,8 @@ import { useAlbum } from "../hooks";
 import { useEffect } from "react";
 import { toast } from "react-toastify";
 
-function Album({ album }) {
-  const data = useAlbum();
+function Album({ album }) { //album will receive as props
+  const data = useAlbum(); //data has the all methods like update, remove 
   const [title, setTitle] = useState("");
   const [isEditable, setIsEditable] = useState(false);
   const [isLoading, setIsLoading] = useState(false);

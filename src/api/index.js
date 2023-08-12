@@ -32,6 +32,7 @@ const customFetch = async (API_URI, { body, ...customConfig }) => {
 export const getAlbums = async () => {
   return customFetch(API_URLS.getAlbums(), { method: "GET" });
 };
+
 export const addAlbum = async (userId, title) => {
   return customFetch(API_URLS.getAlbums(), {
     method: "POST",
@@ -45,6 +46,7 @@ export const updatedAlbum = async (id, title, userId) => {
     body: { title, userId },
   });
 };
+
 export const removeAlbum = async (album) => {
   return customFetch(API_URLS.removeAlbum(album.id), {
     method: "DELETE",
