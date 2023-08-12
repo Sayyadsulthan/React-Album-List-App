@@ -76,7 +76,7 @@ body{
 .right-component .bottom-body button{
     margin-left: 4px;
     padding: 5px;
-    
+    border-radius: 4px;
 }
 
 .remove:hover{

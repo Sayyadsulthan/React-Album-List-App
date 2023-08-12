@@ -2,20 +2,19 @@ import React from "react";
 
 import Album from "./Album";
 import { useAlbum } from "../hooks";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import { useState } from "react";
 import { toast } from "react-toastify";
 
 function App() {
   const data = useAlbum();
-  const [albums, setAlbums] = useState([]);
+  // const [albums, setAlbums] = useState([]);
   const [text, setText] = useState("");
-  const [isEditable, setIsEditable] = useState(false);
-  // console.log(data.albums);
 
-  useEffect(() => {
-    setAlbums(data.albums);
-  });
+
+  // useEffect(() => {
+  //   setAlbums(data.albums);
+  // });
 
   const handleAddToalbum = async () => {
     if (text.length <= 1) {
@@ -24,7 +23,7 @@ function App() {
     const userId = 101;
     const title = text;
     const response = await data.addDataToAlbum(userId, title);
-    console.log(response);
+    setText("")
     if (response) {
       toast.success("album created...");
     } else {

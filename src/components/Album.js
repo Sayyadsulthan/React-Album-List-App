@@ -12,7 +12,7 @@ function Album({ album }) {
 
   useEffect(() => {
     setTitle(album.title);
-  }, []);
+  }, [album]);
 
   async function handleUpdateAlbum() {
     if (title.length <= 1) {
@@ -36,7 +36,7 @@ function Album({ album }) {
       <div className="left-component">
         <img
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRefd4wuCqY4KZvFm_7LoBAVWucDkLjvODedA&usqp=CAU"
-          alt="image"
+          alt="coverPhoto"
         />
       </div>
       <div className="right-component">

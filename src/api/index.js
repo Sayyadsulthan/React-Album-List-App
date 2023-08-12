@@ -1,5 +1,5 @@
 import { API_URLS } from "../utils/constants";
-import { getFormBody } from "../utils";
+// import { getFormBody } from "../utils";
 
 const customFetch = async (API_URI, { body, ...customConfig }) => {
   const headers = {
